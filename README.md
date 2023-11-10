@@ -1,3 +1,23 @@
+[TOC]
+
+# DSA-FINAL-BACKEND
+
+2023 xxxx xxxx
+
+
+
+## 环境配置
+
+设置环境变量`HF_HOME`用以指定存放huggingface模型的路径
+
+`app/models/models.py`文件`init_model(self)`函数中`offload_folder`指定模型参数卸载路径
+
+
+
+## 目录结构
+
+来自ChatGPT
+
 ```
 arduinoCopy codemyflaskapp/
 │
@@ -58,4 +78,3 @@ arduinoCopy codemyflaskapp/
 - `requirements.txt`: 包含项目的依赖项列表，可通过`pip install -r requirements.txt`来安装依赖。
 - `.gitignore`: 指定要忽略的文件和目录，通常包括虚拟环境、数据库文件和敏感信息。
 
-请注意，上述目录结构是一种通用的示例，您可以根据项目的具体需求进行调整和扩展。此外，对于大型项目，可能需要更复杂的组织和模块化结构。
