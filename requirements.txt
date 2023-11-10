@@ -1,0 +1,10 @@
+torch
+transformers~=4.32.1
+accelerate
+colorama~=0.4.6
+cpm_kernels
+sentencepiece
+streamlit
+transformers_stream_generator
+flask~=2.2.2
+eventlet~=0.33.3
