@@ -12,6 +12,7 @@
 
 `app/models/models.py`文件`init_model(self)`函数中`offload_folder`指定模型参数卸载路径
 
+mysql：脚本位于本项目根目录
 
 
 ## 目录结构

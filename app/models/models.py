@@ -16,16 +16,16 @@ class LawLLM:
 
     def init_model(self):
         print("Initializing model...")
-        model_path = "ShengbinYue/DISC-LawLLM"
-        offload_folder = "offload"
-        self.model = AutoModelForCausalLM.from_pretrained(
-            model_path, torch_dtype=torch.float16, device_map="auto", trust_remote_code=True,
-            offload_folder=offload_folder
-        )
-        self.model.generation_config = GenerationConfig.from_pretrained(model_path)
-        self.tokenizer = AutoTokenizer.from_pretrained(
-            model_path, use_fast=False, trust_remote_code=True
-        )
+        # model_path = "ShengbinYue/DISC-LawLLM"
+        # offload_folder = r"D:\NJU\2023-dsa-Final\final\dsa-final-backend\offload"
+        # self.model = AutoModelForCausalLM.from_pretrained(
+        #     model_path, torch_dtype=torch.float16, device_map="auto", trust_remote_code=True,
+        #     offload_folder=offload_folder
+        # )
+        # self.model.generation_config = GenerationConfig.from_pretrained(model_path)
+        # self.tokenizer = AutoTokenizer.from_pretrained(
+        #     model_path, use_fast=False, trust_remote_code=True
+        # )
         print("Model is ready!")
 
     def get_model_and_tokenizer(self):
