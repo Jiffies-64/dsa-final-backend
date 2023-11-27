@@ -8,11 +8,13 @@ from controller.SubjectController import SubjectController
 from controller.ExamPaperController import ExamPaperController
 from controller.ExamPaperAnswerController import ExamPaperAnswerController
 from controller.QuestionAnswerController import QuestionAnswerController
+from controller.ChatController import socketio
 
 app = Flask(__name__, template_folder="./templates")
 app.config['SQLALCHEMY_DATABASE_URI'] \
     = f"mysql+pymysql://{DB_USERNAME}:{DB_PASSWORD}@{DB_HOSTNAME}:{DB_PORT}/{DB_DATABASE}?charset=utf8mb4"
 db.init_app(app)
+socketio.init_app(app)
 
 # with app.app_context():
 #     db.create_all()
@@ -33,5 +35,5 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(host="127.0.0.1", port=8000, debug=True)
-    # socketio.run(app, host="127.0.0.1", port=5000, debug=True, allow_unsafe_werkzeug=True)
+    # app.run(host="127.0.0.1", port=8000, debug=True)
+    socketio.run(app, host="127.0.0.1", port=8000, debug=False)
