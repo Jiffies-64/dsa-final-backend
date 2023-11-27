@@ -1,7 +1,9 @@
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers.generation.utils import GenerationConfig
-from utils.Env import OFFLOAD_FOLDER
+from utils.Env import OFFLOAD_FOLDER, HF_HOME
+import os
+
 
 class LawLLM:
     _instance = None  # 单例模式的实例
@@ -16,6 +18,7 @@ class LawLLM:
 
     def init_model(self):
         print("Initializing model...")
+        os.environ['HF_HOME'] = HF_HOME
         model_path = "ShengbinYue/DISC-LawLLM"
         self.model = AutoModelForCausalLM.from_pretrained(
             model_path, torch_dtype=torch.float16, device_map="auto", trust_remote_code=True,

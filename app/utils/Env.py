@@ -16,3 +16,4 @@ SENDER_PASSWD = os.environ.get('SENDER_PASSWD')
 
 # 与模型相关
 OFFLOAD_FOLDER = os.environ.get('OFFLOAD_FOLDER')
+HF_HOME = os.environ.get('HF_HOME')
