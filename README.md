@@ -7,9 +7,11 @@
 ## Environmental configuration
 
 **① Run database scripts**
+
 The database script is located in the project root directory
 
 **② Configure the '. env' file in the app directory**
+
 The specific field explanations are as follows:
 
 | Field            | Description                                                 |
@@ -25,4 +27,4 @@ The specific field explanations are as follows:
 
 ## Run
 
-After configuration is completed, you can start the backend server through the 'Python app/app. py'
+After configuration is completed, you can start the backend server through the `python app/app.py`
